@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "troopy"
+version = "0.0.1"
+description = "Command Bus/Message Bus implementation for python"
+authors = [
+    "Dawid Kraczkowski <dawid.kraczkowski@gmail.com>"
+]
+
+license = "MIT"
+packages = [
+    {include = "troopy"},
+    # {include = "tests", format = "sdist"},
+]
+readme = "README.md"
+
+keywords = ["troopy", "command", "command bus", "ddd", "message", "message bus", "command router"]
+
+homepage = "https://github.com/kodemore/troopy"
+repository = "https://github.com/kodemore/troopy"
+documentation = "https://github.com/kodemore/troopy"
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+
+# Requirements
+[tool.poetry.dependencies]
+python = "^3.6"
+typing_extensions = "^3.7.4"
+
+[tool.poetry.dev-dependencies]
+black = { version = "^19.3b0", python = "^3.6" }
+coverage = "^4.5.4"
+isort = "^4.3.21"
+mypy = "^0.770"
+pytest = "^5.4.1"
+pytest-asyncio = "^0.12.0"
+pytest-cov = "^2.9.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
