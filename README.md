@@ -1,5 +1,5 @@
 # Troopy 
-Command bus library for python. It tries to make using the message bus pattern in your application easy and flexible.
+Command bus library for python. Makes using the message bus pattern in your application easy.
 
 ## What is a command/message?
 Commands are objects, some kind of an imperative informing what behavior client expects from application. 
