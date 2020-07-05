@@ -1,6 +1,6 @@
 import pytest
 
-from troopy import attach, message_router
+from troopy import command, message_router
 from troopy.errors import HandlerAlreadyAttachedError
 
 
@@ -8,7 +8,7 @@ def test_attach_to_class() -> None:
     def test_handler(message) -> None:
         pass
 
-    @attach(test_handler)
+    @command(test_handler)
     class TestMessage:
         pass
 
@@ -20,7 +20,7 @@ def test_attach_to_nonclass() -> None:
         pass
 
     with pytest.raises(TypeError):
-        @attach(test_handler)
+        @command(test_handler)
         def message() -> None:
             pass
 

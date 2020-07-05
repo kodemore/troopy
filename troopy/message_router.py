@@ -40,6 +40,6 @@ def create_attach_decorator(router: MessageRouter):
     return decorator
 
 
-attach = create_attach_decorator(message_router)
+command = create_attach_decorator(message_router)
 
-__all__ = ["MessageRouter", "message_router", "attach", "create_attach_decorator"]
+__all__ = ["MessageRouter", "message_router", "command", "create_attach_decorator"]

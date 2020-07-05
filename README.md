@@ -31,7 +31,7 @@ pip install troopy
 # Basic Usage
 
 ```python
-from troopy import CommandBus, attach
+from troopy import CommandBus, command
 from dataclasses import dataclass
 
 
@@ -40,7 +40,7 @@ class HelloHandler:
         print("Hello user {command.username}!")
 
 
-@attach(HelloHandler)  # attach command to its handler
+@command(HelloHandler)  # attach command to its handler
 @dataclass
 class SayHello:
     username: str
@@ -65,7 +65,7 @@ It is possible to use custom function for factoring command handlers, consider t
 
 ```python
 import sqlite3
-from troopy import CommandBus, attach
+from troopy import CommandBus, command
 from dataclasses import dataclass
 
 db = sqlite3.connect('example.db') 
@@ -80,7 +80,7 @@ class UserRegistrationHandler:
         self.db.commit()
 
 
-@attach(UserRegistrationHandler)  # attach command to its handler
+@command(UserRegistrationHandler)  # attach command to its handler
 @dataclass
 class RegisterUser:
     username: str

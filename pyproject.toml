@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "troopy"
-version = "0.0.1"
+version = "0.1.0"
 description = "Command Bus/Message Bus implementation for python"
 authors = [
     "Dawid Kraczkowski <dawid.kraczkowski@gmail.com>"
